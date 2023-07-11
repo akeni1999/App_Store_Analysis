@@ -54,7 +54,7 @@ ORDER BY NumApps DESC
 -- Results ( From the analysis we got to know that Games and Entertainment have the highest number of apps per genre which is 3862 and 535 respectively.)
 
 
--- Getting an overview of the apps rating
+-- Getting an overview of the app's rating
 
 SELECT min(user_rating) AS minRating,
 	   max(user_rating) AS maxRating,
@@ -92,7 +92,7 @@ FROM AppleStore
 GROUP BY language_bucket
 ORDER BY Avg_Rating DESC
 
--- Results ( From here we can see that the middel bucket has a higher average user rating. So it is not necessary to work on many languages and we can focus on other aspects of the app. )
+-- Results ( From here we can see that the middle bucket has a higher average user rating. So it is not necessary to work on many languages and we can focus on other aspects of the app. )
 
 
 -- Checking genres with low ratings
