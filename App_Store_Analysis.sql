@@ -28,7 +28,7 @@ FROM AppleStore
 SELECT COUNT(DISTINCT id) as UniqueAPPIDS
 FROM appleStore_description_combined
 
--- Results (Both the UniqueAppIDs are same so there is no missing data.)
+-- Results (Both the UniqueAppIDs are the same so there is no missing data.)
 
 
 -- Checking for any missing values in key fields
@@ -51,7 +51,7 @@ FROM AppleStore
 GROUP BY prime_genre
 ORDER BY NumApps DESC
 
--- Results ( From the analysis we got to know that Games and Entertainment has the highest number of apps per genre which is 3862 and 535 respectively.)
+-- Results ( From the analysis we got to know that Games and Entertainment have the highest number of apps per genre which is 3862 and 535 respectively.)
 
 
 -- Getting an overview of the apps ratingAppleStore
@@ -77,7 +77,7 @@ SELECT CASE
 FROM AppleStore
 GROUP BY App_Type
 
--- Results ( From the analysis we got know that Paid Apps had an better avg rating i.e 3.72 than free apps which is around 3.37.)
+-- Results ( From the analysis we got know that Paid Apps had a better avg rating i.e. 3.72 than free apps which is around 3.37.)
 
 
 -- Check if apps with more supported languages have higher ratings
@@ -92,7 +92,7 @@ FROM AppleStore
 GROUP BY language_bucket
 ORDER BY Avg_Rating DESC
 
--- Results ( From here we can see that middel bucket has higher average user rating. So it is not necessary to work on many languages and we can focus on other aspects of the app. )
+-- Results ( From here we can see that middle bucket has a higher average user rating. So it is not necessary to work on many languages and we can focus on other aspects of the app. )
 
 
 -- Checking genres with low ratings
@@ -103,11 +103,11 @@ GROUP BY prime_genre
 ORDER BY Avg_Rating ASC
 LIMIT 10
 
--- Results ( From the analysis we get to know that Catalogs (2.1), Finance (2.43), Book(2.47) are the genres with the lowest average rating given by the users. This might be the opportunity to create an app in this genres )
+-- Results ( From the analysis we get to know that Catalogs (2.1), Finance (2.43), Book(2.47) are the genres with the lowest average rating given by the users. This might be the opportunity to create an app in this genre)
 
 
 
--- Checking if there is correlation between the length of the app description and the user ratingAppleStore
+-- Checking if there is a correlation between the length of the app description and the user ratingAppleStore
 
 
 SELECT CASE
@@ -141,18 +141,17 @@ WHERE a.rank = 1
 
 ** Final Recommendations **
 
--- 1) Paid Apps have better ratings [ This could be because of number of reasons, one being that users who pay for an app may have higher engagement and perceived more value which might have lead to better ratings for the paid apps.]
+-- 1) Paid Apps have better ratings [ This could be because of a number of reasons, one being that users who pay for an app may have higher engagement and perceived more value which might have led to better ratings for the paid apps.]
 
--- 2) Apps supporting between 10 AND 30 Langauges have better ratings. [ So it is not necessary to work on many languages and we can focus on other aspects of the app. ]
+-- 2) Apps supporting between 10 AND 30 Languages have better ratings. [ So it is not necessary to work on many languages and we can focus on other aspects of the app. ]
 
--- 3) Finanace and Book Apps have low ratings. [ From this we can see that user needs are not met in finance and books apps, so this can be an market opportunity to build an app in one of these categories. ]
+-- 3) Finance and Book Apps have low ratings. [ From this we can see that user needs are not met in finance and books apps, so this can be a market opportunity to build an app in one of these categories. ]
 
--- 4) Apps with a longer description have better ratings. [ Users likely appreciate having an clear understanding of the app's features and capabilities before they download, leading to better ratings. ]
+-- 4) Apps with a longer description have better ratings. [ Users likely appreciate having a clear understanding of the app's features and capabilities before they download, leading to better ratings. ]
 
--- 5) A new App should aim for an average rating above 3.5. [ In app store average rating of all the apps in around 3.5, so for  the new app to standout the rating of the new app should be more than 3.5. ]
+-- 5) A new App should aim for an average rating above 3.5. [ In app store average rating of all the apps is around 3.5, so for  the new app to stand out the rating of the new app should be more than 3.5. ]
 
--- 6) Games and Entertainment genres have high competition. [ These categories have a very high volume of apps, so entering these spaces might be a little challenging becuase of high competition, but also suggests an high user 
---															  demand in these sectors. ]
+-- 6) Games and Entertainment genres have high competition. [ These categories have a very high volume of apps, so entering these spaces might be a little challenging because of high competition, but also suggests a high user demand in these sectors.]
 
 
 
